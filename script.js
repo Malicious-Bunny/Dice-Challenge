@@ -1,41 +1,23 @@
 let dice1=Math.floor(Math.random()*6)+1;
 let dice2=Math.floor(Math.random()*6)+1;
 console.log(`${dice1} and ${dice2}`);
-const diceone=document.querySelector('img.dice1');
-const dicetwo=document.querySelector('img.dice2');
+let path1=String(`images/dice${dice1}.png`);
+let path2=String(`images/dice${dice2}.png`)
 
-if(dice1==1){
-    diceone.setAttribute('src','images/dice1.png');
-}else if(dice1==2){
-    diceone.setAttribute('src','images/dice2.png');
-}else if(dice1==3){
-    diceone.setAttribute('src','images/dice3.png');
-}else if(dice1==4){
-    diceone.setAttribute('src','images/dice4.png');
-}else if(dice1==5){
-    diceone.setAttribute('src','images/dice5.png');
-}else if(dice1==6){
-    diceone.setAttribute('src','images/dice6.png');
-}
-if(dice2==1){
-    dicetwo.setAttribute('src','images/dice1.png');
-}else if(dice2==2){
-    dicetwo.setAttribute('src','images/dice2.png');
-}else if(dice2==3){
-    dicetwo.setAttribute('src','images/dice3.png');
-}else if(dice2==4){
-    dicetwo.setAttribute('src','images/dice4.png');
-}else if(dice2==5){
-    dicetwo.setAttribute('src','images/dice5.png');
-}else if(dice2==6){
-    dicetwo.setAttribute('src','images/dice6.png');
-}
-let head=document.querySelector('h1.winner');
+let img1=document.querySelector('img.dice1');
+img1.setAttribute('src',path1);
+let img2=document.querySelector('img.dice2');
+img2.setAttribute('src',path2);
 
-if(dice1>dice2){
-    head.innerHTML='<strong>🚩Player one wins</strong>';
-}else if(dice1<dice2){
-    head.innerHTML='<strong>Player two wins🚩</strong>'
-}else if(dice1==dice2){
-    head.innerHTML='<strong>😂We got ourselves a tie😂</strong>'
+(dice1>dice2)? document.querySelector('h1.winner').innerHTML='🚩Player1 wins': (dice1<dice2)?document.querySelector('h1.winner').innerHTML='Player2 wins🚩' : document.querySelector('h1.winner').innerHTML='😂Draw!😂';
+/*simply means
+if(a){
+    b
+}else{
+    if(c){
+        d
+    }else{
+        e
+    }
 }
+*/
