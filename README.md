@@ -4,4 +4,4 @@
 <p>Just a reminder of where I'm from and where I'm headed</p>
 
 <h4>Live preview:</h4>
-<a href="https://georgelennon.github.io/Dice-Challenge/">Here</a>
+<a href="https://tar-genius.github.io/Dice-Challenge/">Here</a>
